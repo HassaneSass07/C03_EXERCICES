@@ -1,30 +1,15 @@
 #include <stdio.h>
 
+/* Compte le nombre de chiffres dans un entier positif */
 int main() {
-    int n, original, count = 0;
-
-    // Lire un entier depuis l'entrée standard
+    int n, count = 0, temp;
     scanf("%d", &n);
-    // Conserver la valeur originale de n pour l'affichage final
-    original = n;
 
-    // Si le nombre est zéro, il contient un chiffre
-    if (n == 0) {
-        count = 1;
-    } else {
-        // Si le nombre est négatif, le rendre positif pour compter les chiffres
-        if (n < 0) {
-            n = -n;
-        }
-        // Compter le nombre de chiffres en divisant le nombre par 10 jusqu'à zéro
-        while (n != 0) {
-            n /= 10;
-            count++;
-        }
+    temp = n == 0 ? 1 : n;
+    while (temp != 0) {
+        count++;
+        temp /= 10;
     }
-
-    // Afficher le résultat : combien de chiffres contient le nombre original
-    printf("%d contient %d chiffre(s).\n", original, count);
-
+    printf("%d contient %d chiffre(s).\n", n, count);
     return 0;
 }

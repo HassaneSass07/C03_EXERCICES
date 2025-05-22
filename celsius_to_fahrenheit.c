@@ -1,13 +1,11 @@
 #include <stdio.h>
 
+/* Convertit une température Celsius en Fahrenheit */
 int main() {
-    //Déclare une variable à virgule flottante
-    float celsius;
-    if (scanf("%f", &celsius) != 1) {
-        return 0;
-    }
-    //Fonction permettant la conversion de température
-    float fahrenheit = celsius * 9.0f / 5.0f + 32.0f;
+    float celsius, fahrenheit;
+    
+    scanf("%f", &celsius);
+    fahrenheit = celsius * 9 / 5 + 32;
     printf("%.1f°C équivaut à %.1f°F\n", celsius, fahrenheit);
 
     return 0;

@@ -1,28 +1,21 @@
 #include <stdio.h>
 
+/* Affiche la suite de Fibonacci jusqu'à une valeur limite */
 int main() {
     int limit, a = 0, b = 1, next;
+    scanf("%d", &limit);
 
-    // Lire la limite maximale jusqu'où afficher la suite de Fibonacci
-    scanf("%d", & limit);
+    if (limit >= 0) printf("%d ", a);
+    if (limit >= 1) printf("%d ", b);
 
-    // Boucle tant que le nombre actuel 'a' est inférieur ou égal à la limite
-    while (a <= limit) {
-        // Affiche le nombre actuel de la suite
-        printf(" %d ", a);
-
-        // Calcul du prochain nombre dans la suite de Fibonacci
-        next = a + b;
+    next = a + b;
+    while (next <= limit) {
+        printf("%d ", next);
         a = b;
         b = next;
-
-        // Si le prochain nombre est encore dans la limite, on affiche un espace
-        if (a <= limit) {
-            printf(" "); // Ajoute un espace entre les nombres sauf après le dernier
-        }
+        next = a + b;
     }
-
-    // Passe à la ligne après avoir affiché toute la suite
-    printf(" \n ");
+    printf("");
+    printf("\n");
     return 0;
 }
