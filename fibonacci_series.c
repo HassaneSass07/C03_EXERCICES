@@ -2,7 +2,9 @@
 
 /* Affiche la suite de Fibonacci jusqu'à une valeur limite */
 int main() {
+    /* Déclaration des variables */
     int limit, a = 0, b = 1, next;
+    /*Saisir l'enrée utilisateur */
     scanf("%d", &limit);
 
     if (limit >= 0) printf("%d ", a);
@@ -15,7 +17,6 @@ int main() {
         b = next;
         next = a + b;
     }
-    printf("");
     printf("\n");
     return 0;
 }
