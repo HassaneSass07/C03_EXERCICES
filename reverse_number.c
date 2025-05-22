@@ -6,7 +6,7 @@ int main() {
 
 //Lire la saisie utilisateur
     scanf("%d", &nombre);
-
+    
 //Boucle permettant d'inverser les chiffres d'un entier
     while (nombre != 0) {
         inverse = inverse * 10 + nombre % 10;
@@ -15,4 +15,4 @@ int main() {
 
     printf("Nombre inversé : %d\n", inverse);
     return 0;
-}a
+}
